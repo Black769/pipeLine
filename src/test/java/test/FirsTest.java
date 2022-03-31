@@ -8,7 +8,7 @@ public class FirsTest {
     private WebDriver webDriver;
 @BeforeMethod
     public void setUp(){
-    System.setProperty("webdriver.gecko.driver","/home/felipe/geckodriver");
+    System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
     //System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
     webDriver = new FirefoxDriver();
 }
