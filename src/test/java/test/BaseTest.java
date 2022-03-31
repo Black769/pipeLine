@@ -7,8 +7,8 @@ public class BaseTest {
     protected WebDriver webDriver;
     @BeforeMethod
     public void setUp(){
-        //System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
-        System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
+        System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
+        //System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         webDriver = new FirefoxDriver(options);
