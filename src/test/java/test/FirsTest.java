@@ -1,4 +1,5 @@
 package test;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import page.InitPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -10,7 +11,10 @@ public class FirsTest {
     public void setUp(){
     System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
     //System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
-    webDriver = new FirefoxDriver();
+    FirefoxOptions options = new FirefoxOptions();
+    options.setHeadless(true);
+    webDriver = new FirefoxDriver(options);
+
 }
 @Test
     public void simpleTest(){
