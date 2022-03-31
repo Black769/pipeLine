@@ -1,29 +1,20 @@
 package test;
-import org.openqa.selenium.firefox.FirefoxOptions;
+
+import io.qameta.allure.*;
 import page.InitPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+import utils.TestListener;
 
-public class FirsTest {
-    private WebDriver webDriver;
-@BeforeMethod
-    public void setUp(){
-    System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
-    //System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
-    FirefoxOptions options = new FirefoxOptions();
-    options.setHeadless(true);
-    webDriver = new FirefoxDriver(options);
+@Listeners({ TestListener.class })
+@Epic("Allure TestNG Suite Tests")
+@Feature("Allure TestNG Tests")
+public class FirsTest extends BaseTest{
 
-}
-@Test
+    @Test(priority=0, description="Realizar una búsqueda con resultados")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Realizar una búsqueda con resultados")
     public void simpleTest(){
     InitPage initPage = new InitPage(webDriver);
     initPage.getUrl("https://google.com");
-}
-@AfterMethod
-    public void cleanUp(){
-    webDriver.quit();
-    //webDriver.close();
 }
 }
