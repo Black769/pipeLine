@@ -16,7 +16,7 @@ public class BaseTest {
         //System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
-        webDriver = new RemoteWebDriver(new URL("rewre"),options);
+        //webDriver = new RemoteWebDriver(new URL("rewre"),options);
         webDriver = new FirefoxDriver(options);
     }
     public WebDriver getWebDriver(){
