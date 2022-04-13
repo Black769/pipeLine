@@ -12,8 +12,12 @@ public class BaseTest {
     protected WebDriver webDriver;
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
-        //System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
+        System.out.println(System.getProperty("os.name"));
+        if(System.getProperty("os.name").toString().equals("Linux")){
+            System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
+        } else{
+            System.setProperty("webdriver.gecko.driver","/Users/felipe/Documents/geckodriver");
+        }
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         //webDriver = new RemoteWebDriver(new URL("rewre"),options);

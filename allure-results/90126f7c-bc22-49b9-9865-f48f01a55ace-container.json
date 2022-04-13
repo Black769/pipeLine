@@ -1,1 +1,0 @@
-{"uuid":"90126f7c-bc22-49b9-9865-f48f01a55ace","name":"test.FirsTest.setUp","children":["f32723d6-7efb-45a5-89eb-f3d432f55c0d"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1647701781585,"stop":1647701784957}],"afters":[],"start":1647701781584,"stop":1647701784957}
